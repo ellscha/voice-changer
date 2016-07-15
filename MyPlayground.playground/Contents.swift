@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import CoreAudioKit
 import AVFoundation
 import AVKit
 
@@ -17,15 +16,13 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
     var audioRecorder: AVAudioRecorder?
     var audioPlayer:AVAudioPlayer?
     var audioEngine: AVAudioEngine!
-
     
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createDirectoryLocation()
-        audioEngine = AVAudioEngine()
-
         
         // inside viewDidLoad initialize it
         
@@ -46,12 +43,12 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         //MARK: INSERTING FROM MHORGA.ORG THE AUDIO ENGINE
         // declare the audio engine as a property
         //MARK: CHANGE THE RATE OF THE PLAYBACK
-
+        
         audioPlayer?.enableRate = true
         audioPlayer?.rate = 2.0
-
         
-
+        
+        
         
         
         
@@ -88,13 +85,13 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         } catch {
             print(error)
         }
-
+        
         
         
         
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,7 +102,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         if let player = audioPlayer {
             if player.playing {
                 player.stop()
-
+                
             }
         }
         
@@ -118,7 +115,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
                     
                     // Start recording
                     recorder.record()
-
+                    
                 } catch {
                     print(error)
                 }
@@ -126,15 +123,15 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
             } else {
                 // Pause recording
                 recorder.pause()
-    
+                
             }
         }
-
         
-    
+        
+        
         
     }
-
+    
     @IBAction func stopBtnPressed(sender: AnyObject) {
         audioRecorder?.stop()
         
@@ -145,7 +142,7 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         } catch {
             print(error)
         }
-
+        
         
     }
     
@@ -155,49 +152,35 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
                 do {
                     
                     let audioFile = try AVAudioFile(forReading: recorder.url)
-                    print(audioFile.length)
-
+                    
                     var audioPlayerNode = AVAudioPlayerNode()
                     audioEngine.attachNode(audioPlayerNode)
-                    //audioPlayerNode.play()
-//                    if let newAudioEngine = audioEngine{
-//                        newAudioEngine.attachNode(audioPlayerNode)
-//                    }else{
-//                        print("HEY THIS ISNT Working")
-//                    }
-                    
-                    //audioEngine.attachNode(audioPlayerNode)
                     var changePitchEffect = AVAudioUnitTimePitch()
                     changePitchEffect.pitch = 1000
                     audioEngine.attachNode(changePitchEffect)
                     audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
                     audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
-                    audioEngine.prepare()
-                    try audioEngine.start()
-                    
                     
                     audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
                     
                     
                     audioPlayerNode.play()
                     
-                    
-                    audioPlayerNode.reset()
-//                    audioPlayer = try AVAudioPlayer(contentsOfURL: recorder.url)
+                    //                    audioPlayer = try AVAudioPlayer(contentsOfURL: recorder.url)
                     
                     //                    audioPlayerNode.play()
-//
-//
-                    //audioPlayer?.play()
                     //
-//                    playButton.setImage(UIImage(named: "playing"), forState: UIControlState.Selected)
-//                    playButton.selected = true
+                    //
+                    //                    audioPlayer?.play()
+                    //
+                    //                    playButton.setImage(UIImage(named: "playing"), forState: UIControlState.Selected)
+                    //                    playButton.selected = true
                 } catch {
                     print(error)
                 }
             }
         }
-
+        
     }
     
     
@@ -216,10 +199,9 @@ class ViewController: UIViewController, AVAudioRecorderDelegate, AVAudioPlayerDe
         print("finishing playing")
         
         
-        
     }
     
     
-
+    
 }
 
