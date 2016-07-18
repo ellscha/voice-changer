@@ -10,7 +10,6 @@
 		4D43E79D1D391A0E00B2741A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E79C1D391A0E00B2741A /* AppDelegate.swift */; };
 		4D43E79F1D391A0E00B2741A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D43E79E1D391A0E00B2741A /* ViewController.swift */; };
 		4D43E7A21D391A0E00B2741A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E7A01D391A0E00B2741A /* Main.storyboard */; };
-		4D43E7A41D391A0E00B2741A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E7A31D391A0E00B2741A /* Assets.xcassets */; };
 		4D43E7A71D391A0E00B2741A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D43E7A51D391A0E00B2741A /* LaunchScreen.storyboard */; };
 		4D43E7AF1D391A1A00B2741A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D43E7AE1D391A1A00B2741A /* AVFoundation.framework */; };
 		4D43E7B41D391A2400B2741A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D43E7B01D391A2400B2741A /* AudioToolbox.framework */; };
@@ -24,7 +23,6 @@
 		4D43E79C1D391A0E00B2741A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4D43E79E1D391A0E00B2741A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4D43E7A11D391A0E00B2741A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4D43E7A31D391A0E00B2741A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D43E7A61D391A0E00B2741A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D43E7A81D391A0E00B2741A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D43E7AE1D391A1A00B2741A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -32,7 +30,6 @@
 		4D43E7B21D391A2400B2741A /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4D43E7B31D391A2400B2741A /* CoreAudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioKit.framework; path = System/Library/Frameworks/CoreAudioKit.framework; sourceTree = SDKROOT; };
 		4D43E7B81D391A4500B2741A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		4D5EADAA1D396646002F7B85 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +51,6 @@
 		4D43E7901D391A0E00B2741A = {
 			isa = PBXGroup;
 			children = (
-				4D5EADAA1D396646002F7B85 /* MyPlayground.playground */,
 				4D43E7B81D391A4500B2741A /* Accelerate.framework */,
 				4D43E7B01D391A2400B2741A /* AudioToolbox.framework */,
 				4D43E7B21D391A2400B2741A /* CoreAudio.framework */,
@@ -79,7 +75,6 @@
 				4D43E79C1D391A0E00B2741A /* AppDelegate.swift */,
 				4D43E79E1D391A0E00B2741A /* ViewController.swift */,
 				4D43E7A01D391A0E00B2741A /* Main.storyboard */,
-				4D43E7A31D391A0E00B2741A /* Assets.xcassets */,
 				4D43E7A51D391A0E00B2741A /* LaunchScreen.storyboard */,
 				4D43E7A81D391A0E00B2741A /* Info.plist */,
 			);
@@ -146,7 +141,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D43E7A71D391A0E00B2741A /* LaunchScreen.storyboard in Resources */,
-				4D43E7A41D391A0E00B2741A /* Assets.xcassets in Resources */,
 				4D43E7A21D391A0E00B2741A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
